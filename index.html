@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngelLogin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="animated-text">
+      <span class="word">Welcome</span>
+      <span class="word">to</span>
+      <span class="word">the</span>
+      <span class="word">login</span>
+      <span class="word">page</span>
+    </div>
+    <div><input id="username" class="Username" type="text" placeholder="Username"></div>
+    <div><input id="password" class="Username" type="text" placeholder="Enter Your Password"></div>
+    <div>
+      <button onclick="alertOrNext()" class="button">Login</button>
+    </div>
+    <div id="alert"></div>
+  </div>
+
+  <script>
+    function alert() {
+      const popup = document.getElementById("alert");
+      popup.style.color = "red"
+      popup.innerHTML = "Incorrect Username or Password \u{1F614}"
+
+
+    }
+    function alert2() {
+      const popup = document.getElementById("alert")
+      popup.style.color = "red"
+      popup.innerHTML = "Please Enter Username or Password \u{1F614}"
+    }
+    function loggedIn() {
+      window.location.href = "todo.html"
+    }
+
+    function alertOrNext() {
+      const username = document.getElementById("username").value
+      const password = document.getElementById("password").value
+      if (username == "" || password == "") {
+        return alert2()
+      }
+      if (!(username == "shubham" && password == "helloShubham")) {
+        return alert()
+      }
+      if (username == "shubham" && password == "helloShubham") {
+        loggedIn();
+      }
+    }
+
+  </script>
+</body>
+
+</html>
