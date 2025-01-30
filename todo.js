@@ -43,6 +43,7 @@ function changeTheme() {
   const container2 = document.getElementById("container2");
   const input = document.getElementById("input");
   const domdiv = document.getElementById("todos");
+  const icon = document.getElementById("icon");
 
   if (isDarkMode) {
     container1.style.backgroundImage = "url(bg-desktop-dark.jpg)";
@@ -50,12 +51,14 @@ function changeTheme() {
     input.style.backgroundColor = " rgb(29, 28, 49)";
     input.style.color = "white";
     domdiv.style.backgroundColor = " rgb(29, 28, 49)";
+    icon.src = "icon-sun.svg";
   } else {
     container1.style.backgroundImage = "url(bg-desktop-light.jpg)";
     container2.style.backgroundColor = "white";
     input.style.backgroundColor = "white";
     input.style.color = "black";
     domdiv.style.backgroundColor = "whitesmoke";
+    icon.src = "icon-moon.svg";
   }
 
   for (let i = 0; i < domdiv.children.length; i++) {
