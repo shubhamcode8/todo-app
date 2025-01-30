@@ -9,10 +9,14 @@
 </head>
 
 <body>
-    <div class="container1">
+    <div   id="container1" class="container1">
         <div class="heading">
             <div class="todoheader">TO DO</div>
-            <div class="icon"></div>
+            <div>
+                <button onclick="changeTheme()"  class="icon">
+                    <img id="icon"  src="icon-sun.svg" alt="">
+                </button>
+            </div>
         </div>
         <div>
             <div class="inputplace"><input id="input" class="input" type="text" placeholder="  Create a new todo">
@@ -20,7 +24,7 @@
             </div>
         </div>
     </div>
-    <div class="container2">
+    <div id="container2" class="container2">
         <div id="todos" class="domdiv"></div>
     </div>
 
